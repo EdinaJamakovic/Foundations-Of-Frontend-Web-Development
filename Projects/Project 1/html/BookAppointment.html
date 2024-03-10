@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html style="margin: 0; padding: 0;">
+    <head>
+        <meta charset="UTF-8">
+        <title>Book an Appointment</title>
+        <link rel="icon" href="../imgs/logo2.png">
+    </head>
+    
+    <style>  
+        
+        
+        .navBar{
+            display: inline-grid;
+            grid-template-columns: auto auto auto auto auto auto auto auto auto;
+            width: 100vw;
+            background-color: #a8d6e4;
+            
+        }
+
+        #logo {
+            text-align: left;
+            width: 80px; 
+            height: 80px;
+        }
+
+        #instagram {
+            width: 40px;
+            height: 40px;
+            justify-self: center;
+            margin-top: 13%;         
+        }
+        
+        .navItem {
+            text-align: center;
+            align-self: center;
+            text-decoration: none;
+            color: #1a4a5b;
+            font-weight: bold;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        .textContainer {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            text-align: right;
+        }
+
+        .loginBox {
+            width: 400px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 1px solid #a4d0d2;
+            border-radius: 5px;
+            background-color: #63a9b5;
+        }
+
+
+    </style>
+    
+    <body style= "margin: 0; padding: 0; background-color: #E8F8F5;">
+        <header>
+            <div class="active navBar">
+                <img id="logo" src="../imgs/logo2.png">
+                <a class="navItem" href="HomePage.html">Home</a>
+                <a class="navItem" href="Services.html">Services</a>
+                <a class="navItem" href="PriceList.html">Price List</a>
+                <a class="navItem" href="Gallery.html">Gallery</a>
+                <a class="navItem" href="AboutUs.html">About Us</a>
+                <a class="navItem" href="Contact.html">Contact</a>
+                <a class="navItem" href="BookAppointment.html">Book Appointment</a>
+                <img id="instagram" src="../imgs/profile.png" alt="instagram" >
+            </div>
+        </header>
+
+        <div style="color: #1a4a5b; text-align: center; margin: 30px;">
+            <h1>Book an appointment at Pearl Stomatology Clinic</h1>
+            <div style="display: inline-block; text-align: left;">
+                <p style="line-height: 20px;">Please Log Into Your Patient <br> Account to Schedule an Appointment</p>
+                <div class="loginBox">
+                    <forms>
+                        <b><label for="email">Email</label></b><br>
+                        <input type="text" style="width: 300px; height: 35px;" placeholder="Enter your email">
+                    </form>
+                    <p></p>
+                    <form>
+                        <b><label for="password">Pasword</label></b><br>
+                        <input type="text" style="width: 300px; height: 35px;" placeholder="Enter your password">
+                    </form>
+                </div>
+                <button style="float: right; font-weight: bold; margin-top: 20px;">Log in</button>
+            </div>
+            <div style="clear: both; text-align: center; line-height: 20px; margin: 40px;">
+                <a href="SignUp.html" style="text-decoration: none; color: #1a4a5b;">You're a New Patient?<br><b>Make your own Patient Account!</b></a>
+            </div>
+        </div>
+
+    </body>
+</html>
