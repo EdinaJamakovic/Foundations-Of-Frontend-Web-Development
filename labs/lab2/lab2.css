@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+html {
+    background-color:#85AFD4;
+    font-family: "Lato", sans-serif;
+    color: white
+}
+
+header {
+    text-align: center;
+}
+
+button {
+    background-color: #E47272;
+    font-size: large;
+    color: white;
+    border: 0;
+    border-radius: 20px ;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;  
+}
+
+fieldset {
+    border: 0;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 2px solid white;
+    padding: 15px;
+    text-align: center;
+}
+
+.outerBox {
+    text-align: center;
+    align-content: center;
+}
+
+.innerBox {
+    display: inline-block; 
+    text-align: left;
+}
+
+.lowerBox {
+    text-align: center;
+}
+
+.container {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    row-gap: 5px;
+    column-gap: 10px;
+}
+
+.item {
+    text-align: left;
+    align-self: center;
+}
+
+#textareaItem {
+    display: block; 
+    grid-column: span 2; 
+    grid-row: span 4;
+
+}
+
+#content-container {
+    display: inline-grid;
+    grid-template-columns: auto;
+    text-align: right;
+    text-align: left;
+    align-self: center;
+
+}

@@ -3,48 +3,27 @@
     <head>
         <meta charset="UTF-8">
         <meta name="Lab2" content="Task1">
-        <title>IBU Registration</title>  
+        <title>IBU Registration</title>
+        <link rel="stylesheet" type="text/css" href = "lab2.css">
     </head>
 
-    <style>
-        .container {
-            display: inline-grid;
-            grid-template-columns: auto auto;
-            row-gap: 5px;
-            column-gap: 10px;
-        }
-
-        .item {
-            text-align: left;
-            align-self: center;
-        }
-
-       
-        #content-container {
-        display: inline-grid;
-        grid-template-columns: auto;
-        text-align: right;
-        
-    }
-
-    </style>
     <body>
         <center>
             <img src="ibulogo.png" width="116px" height="29px"><br>
             <h3>International Burch University</h3>
         </center>
-        <div style="text-align: center;">
-            <div style="display: inline-block; text-align: left;">
+        <div class="outerBox">
+            <div class="innerBox">
                 <h2>REGISTRATION FORM</h2>
                 <div class="container">
-                    <div class="item">
+                    <form class="item">
                         <label for="firstname">Firstname:</label><br>
                         <input type="text" placeholder="Enter your firstname">   
-                    </div>
-                    <div class="item">
+                    </form>
+                    <form class="item">
                         <label for="lastname">Lastname:</label><br>
                         <input type="text" placeholder="Enter your lastname">   
-                    </div>
+                    </form>
 
                     <label class="item" for="username">Username:</label>
                     <input class="item" type="text">
@@ -58,8 +37,8 @@
                     <label class="item" for="placeOfBirth">Place of birth:</label>
                     <input class="item" type="text">
 
-                    <label class="item" for="gender" style="align-self: center;">Gender:</label>
-                    <fieldset class="item" style="border: 0;" >
+                    <label class="item" for="gender">Gender:</label>
+                    <fieldset class="item">
                         <form>
                             <input type="radio">
                             <label for="male">Male</label>
@@ -83,15 +62,14 @@
                     <label class="item" for="haircolor">Hair color:</label>
                     <input type="color">
 
-                    <label class="item" for="notes" style="grid-column: span 2;">Notes:</label>
-                    <textarea class="item" style="display: block; grid-column: span 2; grid-row: span 4;"></textarea>
-                    
+                    <label class="item" for="notes">Notes:</label>
+                    <textarea id="textareaItem"></textarea>
                     <div class="item">
                         <input type="checkbox">
                         <label for="notifications">Receive notifications</label>  
                     </div>
                 </div><br>
-                    
+
                     <a href="Login.html"><input type="submit" value="Register" style="float:right;"></a>
             </div>   
         </div>
