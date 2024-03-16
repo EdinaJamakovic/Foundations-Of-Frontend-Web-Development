@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+html {
+    font-family: "Noto Sans", sans-serif;
+}
+
+.navBar{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    width: 100vw;
+    background-color: white;
+    
+}
+
+#logo {
+    text-align: left;
+    width: 80px; 
+    height: 80px;
+}
+
+#instagram {
+    width: 40px;
+    height: 40px;
+    justify-self: center;
+    margin-top: 13%;         
+}
+
+.navItem {
+    text-align: center;
+    align-self: center;
+    text-decoration: none;
+    color: #1a4a5b;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}
+
+.textContainer {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    text-align: right;
+}
