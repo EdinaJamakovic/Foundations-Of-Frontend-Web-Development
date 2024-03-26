@@ -1,112 +1,201 @@
 <!DOCTYPE html>
-<html style="margin: 0; padding: 0;">
-    <head>
-        <meta charset="UTF-8">
-        <title>Pearl Stomatology</title>
-        <link rel="icon" href="../imgs/logo2.png">
-    </head>
-    
-    <style>  
-        
-        
-        .navBar{
-            display: inline-grid;
-            grid-template-columns: auto auto auto auto auto auto auto auto auto;
-            width: 100vw;
-            background-color: #a8d6e4;
-            
-        }
-
-        #logo {
-            text-align: left;
-            width: 80px; 
-            height: 80px;
-        }
-
-        #instagram {
-            width: 40px;
-            height: 40px;
-            justify-self: center;
-            margin-top: 13%;         
-        }
-        
-        .navItem {
-            text-align: center;
-            align-self: center;
-            text-decoration: none;
-            color: #1a4a5b;
-            font-weight: bold;
-            font-size: large;
-            cursor: pointer;
-        }
-
-        .textContainer {
-            display: inline-grid;
-            grid-template-columns: auto auto;
-            text-align: right;
-        }
-
-
-    </style>
-    
-    <body style= "margin: 0; padding: 0; background-color: #E8F8F5;">
-        <header>
-            <div class="active navBar">
-                <img id="logo" src="../imgs/logo2.png">
-                <a class="navItem" href="HomePage.html">Home</a>
-                <a class="navItem" href="Services.html">Services</a>
-                <a class="navItem" href="PriceList.html">Price List</a>
-                <a class="navItem" href="Gallery.html">Gallery</a>
-                <a class="navItem" href="AboutUs.html">About Us</a>
-                <a class="navItem" href="Contact.html">Contact</a>
-                <a class="navItem" href="BookAppointment.html">Book Appointment</a>
-                <img id="instagram" src="../imgs/profile.png" alt="profile" >
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pearl Stomatology</title>
+    <link rel="icon" href="../imgs/logo3.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/project1v4.css" type="text/css">
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-sm">
+                <a class="navbar-brand" href="#"><img id="logo" src="../imgs/logo3.png">Pearl</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Services</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item">A</a></li>
+                                <li><a class="dropdown-item">B</a></li>
+                                <li><a class="dropdown-item">C</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><button type="button" class="btn btn-primary">Book Now</button></a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-7 p-5 d-flex align-items-center">
+                    <div clas="text-left">
+                        <p class="row mainP darkBlueText ">
+                            <span class="lightBlueText">A dentistry clinic</span>you can trust.
+                        </p>
+                        <p class="row sideP">Lorem ipsum dolor sit amet, consectetur adipiscing elit velit, sapien habitant integer senectus malesuada ac.</p>
+                        <div class="row">
+                            <button type="button" class="btn btn-primary col-sm-5 p-4 m-2"><a>Book an appointment</a></button>
+                            <button type="button" class="btn col-sm-3 my-button lightBlueText p-4 m-2"><a>Browse services</a></button>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://assets.website-files.com/60e4a233ef2c63474dd2a3e0/60e4a233ef2c63730fd2a41a_image-home-hero-dentist-template.jpg" class="col-sm-5 my-overlap" alt="#" >
             </div>
-        </header>
+            
+            <div class="my-container">
+                <div class="align-content-center">
+                    <div class="d-inline-block text-align: left">
+                        <p><i class="fa fa-envelope fon"></i><span>Contact Us<br></span><span>+387-33-000-000<br>contact@dentist.com<br></span><span>Book an appointment</span></p>
+                    </div>
+                </div>
+                    <div class="text-align: left" >
+                        <p><i class="fa-regular fa-clock"></i><span>Open Hours<br></span><span>Mon-Fri: </span><span>8:00 AM to 5:00 PM<br></span><span>Saturday: </span><span>9:00 AM to 3:30 PM<br></span><span>Sunday: </span><span>9:00 AM to 3:30 PM<br></span></p>
+                    </div>
+                    <div class="text-align: left" >  
+                        <p><i class="fa-solid fa-tooth"></i><span>Services<br></span>Cosmetic dentist<br>Dental implants<br>Teeth whitening</p>
+                    </div>
 
-        <div style="color: #1a4a5b; text-align: center;">
-            <h1>Pearl Stomatology Clinic</h1>
-            <h2>What's our Mission?</h1>
-        </div>
-        <div style="color: #1a4a5b; text-align: center; line-height: 35px;margin-inline: 150px;">
-            <p>Welcome to our premium dentist office, where your smile is our top priority. At Pearl Stomatology, we are dedicated to providing you with exceptional dental care in a comfortable and luxurious environment. Our team of highly skilled dentists and friendly staff are committed to delivering personalized treatment tailored to your unique needs. From routine cleanings to advanced cosmetic procedures, we offer a comprehensive range of services designed to enhance and maintain your oral health. Experience the difference of premium dentistry at Pear Stomatology, where excellence meets comfort.</p>
-            <hr>
-            <h1>Our Staff</h2>
-        </div>
-        
-        
-        <div style="display: flex; justify-content: center;">
-            <div style="display: grid; grid-template-columns: auto auto auto; column-gap: 20px; text-align: center;">
-                <img src="../imgs/dentist1.jpg" alt="Dr Spec. Jasmine Rivera" style="width: 341px; height: 341px;">
-                <img src="../imgs/dentist2.jpg" alt="Dr. Jasmine Rivera" style="width: 341px; height: 341px;">
-                <img src="../imgs/technician.jpg" alt="Oral Hygienist Isabella Montgomery" style="width: 341px; height: 341px;">
-                <p>Dr Spec. Jasmine Rivera</p>
-                <p>Dr. Jasmine Rivera</p>
-                <p>Oral Hygienist Isabella Montgomery</p>
+                
             </div>
         </div>
-        <hr>
 
-        <div style="color: #1a4a5b; text-align: center; line-height: 35px;margin-inline: 150px; margin-top: 50px;">
-            <h1>Be Comfortable</h1>
-            <img src="../imgs/waitingRoom.jpg">
-            <p>Step into our waiting room, where comfort meets elegance, making every minute of your wait as delightful as your smile.</p>
-
-            
-        </div>
-        <hr>
-            
-            <div style="display: grid; grid-template-columns: auto auto; color:  #1a4a5b; text-align: center; align-content: center; line-height: 35px; margin-top: 50px;">
-                <h1 style="grid-column: span 2;">Our Equipment</h1>
-                <img src="../imgs/equipment1.jpg" width="750px" height="526">
-                <img src="../imgs/equipment3.jpg">
-                <p style="grid-column: span 2;">Welcome to our state-of-the-art dentist offices, where every corner whispers sophistication and every tool promises precision, ensuring your smile receives nothing but the finest care.</p>
+    <div class="container col-sm-10 offset-2">
+        <div class="row">
+            <p class="col-sm-1">Services</p>
+            <div class="row">
+                <p class="col-sm-8">
+                    Our team of dentists can help help with a variety of dental services
+                </p>
+                <div class="col-sm-4 d-flex justify-content-end">
+                    <a><button type="button" class="btn btn-primary">Book an appointment</button></a>
+                </div> 
             </div>
+        </div>
 
-        
-
-
-    </body>
-
-
+        <div class="row">
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="container col-sm-12">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://assets.website-files.com/60e4a233ef2c63414dd2a3fd/60e4a233ef2c632dcad2a4e5_cosmetic-dentistry-dentist-webflow-template.svg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card 1</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://assets.website-files.com/60e4a233ef2c63414dd2a3fd/60e4a233ef2c63f898d2a4e6_orthodontics-dentist-webflow-template.svg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card 2</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://assets.website-files.com/60e4a233ef2c63414dd2a3fd/60e4a233ef2c6328f0d2a4e7_oral-hygiene-dentist-webflow-template.svg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card 3</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://assets.website-files.com/60e4a233ef2c63414dd2a3fd/60e4a233ef2c636c7bd2a4e8_dental-treatment-dentist-webflow-template.svg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card 4</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://assets.website-files.com/60e4a233ef2c63414dd2a3fd/60e4a233ef2c636c7bd2a4e8_dental-treatment-dentist-webflow-template.svg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card 5</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5">
+                                    <div class="card">
+                                        <img class="card-img-top" src="https://assets.website-files.com/60e4a233ef2c63414dd2a3fd/60e4a233ef2c63d40dd2a4e9_dental-surgery-dentist-webflow-template.svg" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card 6</h5>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container col-sm-5 justify-content-center">
+                        <div class="card">
+                            <img class="card-img-top" src="https://assets.website-files.com/60e4a233ef2c63414dd2a3fd/60e4a233ef2c633177d2a4ea_dental-implants-dentist-webflow-template.svg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card 7</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev justify-content-start" href="#carouselExample" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next justify-content-end" href="#carouselExample" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+    </div>
+    </div> 
+</body>
 </html>
