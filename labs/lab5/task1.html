@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Table</title>
+<style>
+  table {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  th {
+    cursor: pointer;
+  }
+  tr:hover {
+    background-color: #f2f2f2;
+  }
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <p id="modalText"></p>
+  </div>
+</div>
+
+<table id="userTable">
+  <thead>
+    <tr>
+      <th id="idHeader">ID</th>
+      <th id="nameHeader">Name</th>
+      <th id="countryHeader">Country</th>
+      <th id="emailHeader">Email</th>
+      <th id="actionHeader">Action</th>
+    </tr>
+    <tbody id="tableBody">
+    </tbody>
+  </thead>
+</table>
+
+<script>
+  const users = [
+    { id: 1, name: 'John Doe', country: 'USA', email: 'john1@example.com', profilePic: 'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671142.jpg?size=626&ext=jpg&ga=GA1.1.421460371.1710438150&semt=sph' },
+    { id: 2, name: 'Jane Smith', country: 'Canada', email: 'jane2@example.com', profilePic: 'https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?size=338&ext=jpg&ga=GA1.1.421460371.1710438150&semt=sph' },
+    { id: 3, name: 'Adam Johnson', country: 'UK', email: 'adam3@example.com', profilePic: 'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671116.jpg?size=626&ext=jpg&ga=GA1.1.421460371.1710438150&semt=sph' },
+    { id: 4, name: 'Emma Lee', country: 'Australia', email: 'emma4@example.com', profilePic: 'https://img.freepik.com/free-psd/3d-rendering-avatar_23-2150833554.jpg?size=626&ext=jpg&ga=GA1.1.421460371.1710438150&semt=sph' },
+    { id: 5, name: 'Michael Brown', country: 'USA', email: 'michael5@example.com', profilePic: 'https://img.freepik.com/free-psd/3d-illustration-person-with-glasses_23-2149436190.jpg?size=626&ext=jpg&ga=GA1.1.421460371.1710438150&semt=sph' },
+    { id: 6, name: 'Emily Davis', country: 'Canada', email: 'emily6@example.com', profilePic: 'https://img.freepik.com/free-psd/3d-illustration-human-avatar-profile_23-2150671140.jpg?size=626&ext=jpg&ga=GA1.1.421460371.1710438150&semt=sph' }
+  ];
+
+  function createTableRow(user) {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${user.id}</td>
+      <td><img src="${user.profilePic}" alt="Profile Pic" class="profile-pic">${user.name}</td>
+      <td>${user.country}</td>
+      <td>${user.email}</td>
+      <td><button onclick="showModal(${user.id}, '${user.name}')">Click</button></td>
+    `;
+    return row;
+  }
+
+  function renderTable(data) {
+    const tableBody = document.getElementById('tableBody');
+    tableBody.innerHTML = '';
+    data.forEach(user => {
+      tableBody.appendChild(createTableRow(user));
+    });
+  }
+
+  function sortBy(key) {
+    let sortOrder = 1;
+    if (key.startsWith('-')) {
+      sortOrder = -1;
+      key = key.substring(1);
+    }
+    return function(a, b) {
+      const result = (a[key] < b[key]) ? -1 : (a[key] > b[key]) ? 1 : 0;
+      return result * sortOrder;
+    }
+  }
+
+  document.getElementById('idHeader').addEventListener('click', () => {
+    users.sort(sortBy('id'));
+    renderTable(users);
+  });
+
+  document.getElementById('nameHeader').addEventListener('click', () => {
+    users.sort(sortBy('name'));
+    renderTable(users);
+  });
+
+  document.getElementById('countryHeader').addEventListener('click', () => {
+    users.sort(sortBy('country'));
+    renderTable(users);
+  });
+
+  document.getElementById('emailHeader').addEventListener('click', () => {
+    users.sort(sortBy('email'));
+    renderTable(users);
+  });
+
+  function showModal(id, name) {
+    const modal = document.getElementById('modal');
+    const modalText = document.getElementById('modalText');
+    modalText.innerText = `You clicked on the user: ${name}`;
+    modal.style.display = 'block';
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+  }
+
+  const rows = document.getElementsByTagName('tr');
+  for (let i = 0; i < rows.length; i++) {
+    rows[i].addEventListener('mouseover', function() {
+      this.style.backgroundColor = '#ddd';
+    });
+    rows[i].addEventListener('mouseout', function() {
+      this.style.backgroundColor = '';
+    });
+  }
+
+  renderTable(users);
+</script>
+
+</body>
+</html>
