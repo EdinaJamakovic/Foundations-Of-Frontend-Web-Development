@@ -1,0 +1,167 @@
+/* General */
+* {
+    color: #181443;
+}
+
+body.inverted {
+    background-color: #F2F1FE;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #181443;
+}
+
+.nav-link,
+.navbar-brand {
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: #F2F1FE !important;
+    color: #181443 !important;
+}
+
+.container-fluid {
+    background-color: #4a3ecd;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #181443;
+    border: 0;
+}
+
+.nav-item .btn-primary.btn-inverted {
+    background-color: white;
+    color: #181443;
+}
+
+.btn-primary a {
+    color: white !important;
+}
+
+.btn-primary:hover {
+    color: #181443 !important;
+    background-color: #F2F1FE !important;
+}
+
+.btn-primary:disabled {
+    background-color: #5D4FFF;
+    opacity: 0.5; /* Reduced opacity */
+}
+
+.my-button {
+    background-color: #2c2ca6;
+}
+
+/* Text Colors */
+.sideP,
+.muted-text {
+    color: whitesmoke;
+}
+
+.darkBlueText {
+    color: #181443;
+}
+
+.lightBlueText {
+    color: white;
+}
+
+/* Containers */
+.my-container,
+fieldset {
+    background-color: white;
+}
+
+/* Icons */
+.my-mini-icon {
+    color: white;
+    background-color: #5D4FFF;
+}
+
+/* Cards */
+.card:hover h5 {
+    color: #5D4FFF;
+}
+
+/* Carousel */
+.carousel-control-next .carousel-control-next-icon i,
+.carousel-control-prev .carousel-control-prev-icon i {
+    color: #5D4FFF;
+}
+
+/* Footer */
+footer {
+    background-color: #181443;
+    padding-top: 20px; /* Remove top padding */
+    padding-bottom: 0; /* Remove bottom padding */
+    margin-top: -50px; /* Adjust margin to overlap with previous section */
+}
+
+footer ul i {
+    color: #5D4FFF;
+    background-color: white;
+}
+
+footer p,
+footer h3 {
+    color: white;
+}
+
+/* Forms */
+.form-control:hover {
+    border-color: #617eff;
+}
+
+/* Contact Us */
+.contact-us-container i {
+    color: black;
+}
+
+.contact-us-container h1 {
+    color: white;
+}
+
+/* Overlap */
+.col-sm-5.my-overlap img {
+    z-index: -4; /* Place it below the overlapping div */
+}
+
+.my-container {
+    z-index: 10; /* Increase z-index */
+    position: relative;
+}
+
+.container-fluid.overlap {
+    position: relative;
+}
+
+/* Theme-specific styles */
+.my-container .my-mini-container .darkBlueText {
+    color: #181443;
+}
+
+.my-container .my-mini-container .lightBlueText {
+    color: #5D4FFF;
+}
+
+.my-container .my-mini-container .muted-text {
+    color: #5e4fffde;
+}
+
+h5.inverted {
+    color: #181443;
+    background-color: white;
+}
+
+#my-footer .btn.btn-primary {
+    background-color: #5D4FFF !important;
+}
+
+/* Error and Success Messages */
+#error-message, 
+#success-message {
+    color: white;
+}

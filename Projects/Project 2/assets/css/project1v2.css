@@ -3,7 +3,6 @@
 
 * {
     font-family: "Noto Sans", sans-serif;
-    color: #181443;
     transition: all 0.4s;
 }
 
@@ -18,9 +17,6 @@ body, html {
     font-family: "Noto Sans", sans-serif;
 }
 
-body.inverted {
-    background-color:  #F2F1FE;
-}
 
 /* Links */
 a {
@@ -37,7 +33,6 @@ a {
 /* Navbar */
 .navbar {
     box-shadow: 0px 4px 8px rgba(139, 139, 139, 0.2);
-    background-color: white;
 }
 
 .navbar-nav {
@@ -45,7 +40,6 @@ a {
 }
 
 .nav-link {
-    color: #181443;
     margin: 10px;
     margin-left: 15px;
     padding: 10px;
@@ -57,8 +51,6 @@ a {
 }
 
 .nav-link:hover {
-    background-color: #F2F1FE !important;
-    color: #5D4FFF !important;
     border-radius: 8px;
 }
 
@@ -75,30 +67,21 @@ a {
 
 /* Buttons */
 .btn-primary {
-    background-color: #5D4FFF;
     font-weight: 800;
 }
 
-.btn-primary a {
-    color:white !important;
-}
-
 .btn-primary:hover {
-    color: #181443 !important;
-    background-color: #F2F1FE !important;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(139, 139, 139, 0.2) !important;
     transform: scale(1.05);
 }
 
 .btn-primary:disabled {
-    background-color:#5D4FFF;
     opacity: 0.5; /* Reduced opacity */
 }
 
 .my-button {
     box-shadow: 0px 4px 8px rgba(139, 139, 139, 0.3) !important;
-    background-color: white;
     font-weight: 700;
     border: 0;
     border-radius: 5px;
@@ -111,22 +94,8 @@ a {
 }
 
 .sideP {
-    color: #625D7E;
     font-weight: 300;
     font-size: 2vw;
-}
-
-/* Font color */
-.muted-text {
-    color: #625D7E;
-}
-
-.darkBlueText {
-    color: #181443;
-}
-
-.lightBlueText {
-    color: #5D4FFF;
 }
 
 /* Overlap container */
@@ -135,7 +104,6 @@ a {
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 6vw;
-    background-color: white;
     padding: 30px;
     border-radius: 20px;
     margin-top: -3vw;
@@ -143,6 +111,7 @@ a {
     margin-left: 3vw;
     margin-right: 3vw;
     box-shadow: 0px 4px 8px rgba(139, 139, 139, 0.2);
+
 }
 
 .my-mini-container {
@@ -169,15 +138,10 @@ a {
     margin: 20px;
     font-size: 40px;
     height: 60px;
-    color: white;
-    background-color: #5D4FFF;
     border-radius: 16px;
 }
 
 .my-mini-icon2 {
-    color:white !important; 
-    background-color: 
-    #5D4FFF; 
     font-size: 20px; 
     padding:10px; 
     margin-right: 10px; 
@@ -189,14 +153,8 @@ a {
 }
 
 .my-mini-subtext {
-    color: #625D7E;
     font-size: 15px;
     line-height: 30px;
-}
-
-.my-overlap {
-    z-index: -4;
-    margin-bottom: -3vw;
 }
 
 /* Cards */
@@ -229,16 +187,8 @@ a {
 
 .card:hover h5 {
     cursor: pointer;
-    color: #5D4FFF;
     transform: scale(1.15);
     margin-left: 3vw;
-}
-
-/* Carousel */
-.carousel-control-next .carousel-control-next-icon i,
-.carousel-control-prev .carousel-control-prev-icon i {
-    color: #5D4FFF;
-    font-size: 50px;
 }
 
 /* Img */
@@ -248,27 +198,24 @@ img {
 }
 
 /* Footer */
+
 footer {
-    background-color: #F2F1FE;
-    padding: 40px;
+    padding-top: 20px; /* Remove top padding */
+    padding-bottom: 0; /* Remove bottom padding */
+    margin-top: -50px; /* Adjust margin to overlap with previous section */
 }
 
 footer.inverted {
-    background-color: white;
     padding: 40px;
 }
 
 footer ul i {
-    color: #5D4FFF;
-    background-color: white;
     padding: 10px;
     border-radius: 8px;
     font-size: 30px;
 }
 
 footer ul i.inverted{
-    color: #5D4FFF;
-    background-color: #F2F1FE;
     padding: 10px;
     border-radius: 8px;
     font-size: 30px;
@@ -313,7 +260,6 @@ footer ul i.inverted{
 
 .form-control:hover {
     box-shadow: 0px 4px 8px rgba(139, 139, 139, 0.2);
-    border-color: #617eff;
 }
 
 ::placeholder {
@@ -337,16 +283,10 @@ fieldset form .btn-primary {
 
 fieldset {
     box-shadow: 0px 4px 8px rgba(139, 139, 139, 0.2);
-    background-color: white;
     border-radius: 16px;
 }
 
-
 /* book appointment containters */
-
-.contact-us-container i {
-    color: black;
-}
 
 .contact-us-container .row {
     margin: 10px;
@@ -363,4 +303,22 @@ fieldset {
 
 .d-flex.wrap {
     flex-wrap: wrap;
+}
+
+.form-check-input[type="checkbox"] {
+    width: 3rem;
+    height: 1.5rem;
+}
+
+.navbar-brand:hover {
+    color: #cdc8ff !important;
+}
+
+#error-message, #success-message {
+    z-index: 9999;
+}
+
+.error {
+    font-size: medium;
+    font-weight: 400;
 }
