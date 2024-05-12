@@ -156,6 +156,16 @@ h5.inverted {
     background-color: white;
 }
 
+h1.inverted {
+    color: #181443;
+    background-color: white;
+}
+
+.accordion-title.inverted .accordion-body.inverted {
+        color: #181443;
+        background-color: white;
+}
+
 #my-footer .btn.btn-primary {
     background-color: #5D4FFF !important;
 }
@@ -164,4 +174,16 @@ h5.inverted {
 #error-message, 
 #success-message {
     color: white;
+}
+
+.accordion-item {
+    background-color: white
+}
+
+.accordion-title {
+    color: #181443;
+}
+
+.accordion-body p {
+    color: #181443;
 }

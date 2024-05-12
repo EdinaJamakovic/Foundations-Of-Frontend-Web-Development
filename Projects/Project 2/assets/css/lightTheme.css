@@ -110,3 +110,15 @@ footer ul i {
 #success-message {
     color: #181443;
 }
+
+.accordion-item {
+    background-color: #5D4FFF;
+}
+
+.accordion-title {
+    color: white;
+}
+
+.accordion-body p {
+    color: white;
+}

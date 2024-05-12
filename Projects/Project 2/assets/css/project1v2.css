@@ -3,7 +3,6 @@
 
 * {
     font-family: "Noto Sans", sans-serif;
-    transition: all 0.4s;
 }
 
 /* Headers */
@@ -16,7 +15,6 @@ body, html {
     overflow-x: hidden;
     font-family: "Noto Sans", sans-serif;
 }
-
 
 /* Links */
 a {
@@ -321,4 +319,56 @@ fieldset {
 .error {
     font-size: medium;
     font-weight: 400;
+    color: red;
 }
+
+#accordion {
+    list-style-type: none;
+}
+
+#accordion-toggle {
+    cursor: pointer;
+}
+
+.accordion-item {
+    padding: 10px;
+    margin:10px;
+    background-color: #5D4FFF;
+    border-radius: 8px;
+}
+
+.accordion-title {
+    align-items: center;
+    padding: 10px;
+    font-weight: 800;
+    font-size: x-large;
+}
+
+.accordion-body {
+    align-items: center;
+    padding: 20px;
+    display: none;
+}
+
+.accordion-body p {
+    font-size: large;
+}
+
+#accordion-wrapper {
+    display:none;
+    margin: 15px;
+}
+
+ul {
+    padding: 10px;
+}
+
+#facebookShow {
+    display: none;
+}
+
+#success-message {
+    display: none;
+}
+
+
