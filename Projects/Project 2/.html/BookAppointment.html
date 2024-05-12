@@ -62,37 +62,37 @@
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     <label for="name">Name</label>
-                                    <input name="name" type="text" class="form-control" placeholder="Full name">
+                                    <input if="#fullName" name="name" type="text" class="form-control" placeholder="Full name">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="name">E-mail</label>
-                                    <input name="email" type="text" class="form-control" placeholder="email@example.com">
+                                    <label for="email">E-mail</label>
+                                    <input id="email" name="email" type="text" class="form-control" placeholder="email@example.com">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="name">Phone</label>
-                                    <input name="phone" type="text" class="form-control" placeholder="(123)-840 3987">
+                                    <label for="phone">Phone</label>
+                                    <input id="phone" name="phone" type="text" class="form-control" placeholder="(123)-840 3987">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label for="name">Service</label>
-                                    <input name="services" type="text" class="form-control" placeholder="Ex. Dental Implants">
+                                    <label for="services">Service</label>
+                                    <input id="service" name="services" type="text" class="form-control" placeholder="Ex. Dental Implants">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-12">
-                                    <label for="name">Message</label>
-                                    <textarea type="text" class="form-control" rows="3" placeholder="Please describe what service you are interested in..." formnovalidate></textarea>
+                                    <label for="message">Message</label>
+                                    <textarea id="message" type="text" class="form-control" rows="3" placeholder="Please describe what service you are interested in..." formnovalidate></textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-3">
-                                    <button type="submit" class="btn btn-primary md-4" data-bs-toggle="modal" data-bs-target="#appointment-modal">Submit</button>
+                                    <button id="#submit-button" type="submit" class="btn btn-primary md-4" data-bs-toggle="modal" data-bs-target="#appointment-modal">Submit</button>
                                 </div>
                             </div>
                         </form>
                     </fieldset>
-                    <div class="modal fade" id="appointment-modal" tabindex="-1" aria-labelledby="appointment-modal-label" aria-hidden="true">
+                    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="appointment-modal-label" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -123,22 +123,7 @@
                                     <button class="btn btn-primary" type="button" id="button-addon2" data-bs-toggle="modal" data-bs-target="#subscribe-modal">Subscribe</button>
                                 </div>
                             </form>
-                            <div class="modal fade" id="subscribe-modal" tabindex="-1" aria-labelledby="subscribe-modal-label" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="subscribe-modal-label">Thank You for Subscribing!</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p>Stay tuned and follow your email for exciting new offers!</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Okay!</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                         <div class="m-3">
                             <h3>Contact Us</h3>
