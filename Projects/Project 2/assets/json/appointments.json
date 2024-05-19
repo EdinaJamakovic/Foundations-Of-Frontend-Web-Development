@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "date": "2024-05-20",
+        "time": "10:00 AM",
+        "is_booked": false
+    },
+    {
+        "id": "2",
+        "date": "2024-05-20",
+        "time": "11:30 AM",
+        "is_booked": true
+    },
+    {
+        "id": "3",
+        "date": "2024-05-21",
+        "time": "2:00 PM",
+        "is_booked": false
+    },
+    {
+        "id": "4",
+        "date": "2024-05-21",
+        "time": "3:30 PM",
+        "is_booked": false
+    },
+    {
+        "id": "5",
+        "date": "2024-05-22",
+        "time": "9:00 AM",
+        "is_booked": true
+    }
+]

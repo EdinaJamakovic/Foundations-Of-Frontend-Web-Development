@@ -200,7 +200,7 @@ img {
 footer {
     padding-top: 20px; /* Remove top padding */
     padding-bottom: 0; /* Remove bottom padding */
-    margin-top: -50px; /* Adjust margin to overlap with previous section */
+
 }
 
 footer.inverted {
@@ -330,11 +330,11 @@ fieldset {
     cursor: pointer;
 }
 
-.accordion-item {
+.accordion-item1 {
     padding: 10px;
     margin:10px;
     background-color: #5D4FFF;
-    border-radius: 8px;
+    border-radius: 1rem;
 }
 
 .accordion-title {
@@ -371,4 +371,22 @@ ul {
     display: none;
 }
 
+.btn:focus, .btn:active, button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  #image-gallery .modal-footer{
+    display: block;
+  }
+  
+  .thumb{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
 
+.container.gallery {
+    margin: 20px;
+    text-align: center !important;
+    align-items: center !important;
+}

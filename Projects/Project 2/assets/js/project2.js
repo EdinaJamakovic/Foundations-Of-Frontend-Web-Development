@@ -1,5 +1,6 @@
 $(document).ready(function(){
     
+    
     //Form validation BEGINING
     $.validator.addMethod("phoneBH", function(phone_number, element) {
         console.log("Input:", phone_number);
@@ -19,10 +20,10 @@ $(document).ready(function(){
         var themeLink = $("#theme");
         var currentTheme = themeLink.attr('href');
 
-        if (currentTheme.includes("../assets/css/lightTheme.css")) {
-            themeLink.attr('href', "../assets/css/darkTheme.css");
+        if (currentTheme.includes("./assets/css/lightTheme.css")) {
+            themeLink.attr('href', "./assets/css/darkTheme.css");
         } else {
-            themeLink.attr('href', "../assets/css/lightTheme.css");
+            themeLink.attr('href', "./assets/css/lightTheme.css");
         }
     });
 
@@ -55,6 +56,7 @@ $(document).ready(function(){
         rules: {
             email: {
                 email: true,
+                required: true,
             },
             phone: {
                 // Define a custom method for validating phone numbers
@@ -87,7 +89,46 @@ $(document).ready(function(){
         },
 
         submitHandler: function(form){
-            form.reset()
+            $.blockUI({
+                message: '<h1><i class="fa fa-spinner fa-spin"></i>Processing...</h1>',
+                overlayCSS: {
+                    backgroundColor: '#fff',
+                    opacity: 0.8,
+                    cursor: 'wait'
+                }
+            });
+
+                let formData = {
+                    fullName: $("#fullName").val(),
+                    email: $("#email").val(),
+                    phone: $("#phone").val(),
+                    service: $("#service").val(),
+                    message: $("#message").val()
+                }
+        
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost/Foundations-Of-Frontend-Web-Development/Projects/Project%202/assets/json/logs.json",
+                    data: JSON.stringify(formData)  ,
+                    dataType: "json",
+                    success: function(data) {
+                        console.log("Data added successfully: " + data);
+                        toastr.success("Successful!");
+                        $.unblockUI();
+                        
+                    },
+                    error: function (xhr, status, error){
+                        console.log(formData);
+                        console.log("Status: " + status);
+                        console.log("Error: " + error);
+                        console.log("Response Text: " + xhr.responseText);
+                        toastr.error("Something went wrong.");
+                        $.unblockUI();
+                    }
+                    
+                })
+        
+           // form.reset()
         },
 
     });
@@ -104,10 +145,10 @@ $(document).ready(function(){
         }
     })
 
-    $(".accordion-item").click(function(event){
+    $(".accordion-item1").click(function(event){
         event.preventDefault();
         let index = $(this).index();
-        let currentItem = $(".accordion-item").eq(index);
+        let currentItem = $(".accordion-item1").eq(index);
         let currentBody = currentItem.find(".accordion-body");
 
         if(currentBody.css("display") == "block") {
@@ -121,28 +162,63 @@ $(document).ready(function(){
 
     })
 
-    $("#appointment-form").submit(function(event){
-        event.preventDefault();
-        let formData = {
-            fullName: $("#fullName").val(),
-            email: $("#email").val(),
-            phone: $("#phone").val(),
-            service: $("#service").val(),
-            message: $("#message").val()
-        }
-
+    
+    //appointments table
+    function getAppointments(){
         $.ajax({
-            type: "POST",
-            url: "../json/appointments.json",
-            data: formData,
-            dataType: "json",
+            url: "http://localhost/Foundations-Of-Frontend-Web-Development/Projects/Project%202/assets/json/appointments.json",
+            type: 'GET',
+            dataType: 'json',
             success: function(data) {
-                console.log("Data added successfully: " + data);
-            },
-            error: function (responseTxt, statusTxt, xhr){
-                console.log("Error: " + xhr.responseText);
+                console.log(data);
+                $("table#appointments").DataTable({
+                    data: data, 
+                    columns: [
+                        { data: 'date', title: 'Date' },
+                        { data: 'time', title: 'Time' }, 
+                        { data: 'is_booked', title: 'Booked' },
+                        {
+                        title: 'Book Appointment',
+                            render: function (data, type, row, meta) {
+                                if (!row.is_booked) {
+                                    return `<button class="btn btn-primary book-btn">Book</button>`;
+                                } else {
+                                    return 'Already Booked';
+                                }
+                            }
+                        }
+                    ],
+
+                });
+                
             }
         })
+    };
+
+    getAppointments();
+
+    $("#appointments").on("click", ".book-btn", function(){
+        let row = $(this).closest("tr");
+        let booked_column = row.find("td").eq(2);
+        $(this).html("Cancel").css({"background-color": "#50C878", "border-color":"#00A36C"}).removeClass("book-btn").addClass("cancel-btn");
+        row.css("background-color", "#AFE1AF");
+        booked_column.html("true");
+        toastr.success("Appointment booked successfully!")
+    });
+    $("#appointments").on("click", ".book-btn", function(){
+        let index = $(this).index();
+        console.log("Button clicked!");
+
+        // Rest of your code...
+    });
+
+    $("#appointments").on("click", ".cancel-btn", function(){
+        let row = $(this).closest("tr");
+        let booked_column = row.find("td").eq(2);
+        $(this).html("Book").removeAttr("style").removeClass("cancel-btn").addClass("book-btn");
+        row.removeAttr("style");
+        booked_column.html("false");
+        toastr.info("Appointment canceled successfully!");
     })
 
 });
