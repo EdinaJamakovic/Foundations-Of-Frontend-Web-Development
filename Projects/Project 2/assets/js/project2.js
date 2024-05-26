@@ -1,6 +1,5 @@
 $(document).ready(function(){
     
-    
     //Form validation BEGINING
     $.validator.addMethod("phoneBH", function(phone_number, element) {
         console.log("Input:", phone_number);
@@ -126,8 +125,9 @@ $(document).ready(function(){
                         $.unblockUI();
                     }
                     
-                })
-        
+                });
+
+            //window.location.replace("#appointments");
            // form.reset()
         },
 
@@ -136,17 +136,12 @@ $(document).ready(function(){
 
     //accordion menu START
     $("#accordion-toggle").click(function(){
+        console.log("clicked!!!")
         let acc = $("#accordion-wrapper");
-        if (acc.css("display") == "block"){
-            acc.slideUp();
-        }
-        else {
-            acc.slideDown();
-        }
+        acc.slideDown();
     })
 
     $(".accordion-item1").click(function(event){
-        event.preventDefault();
         let index = $(this).index();
         let currentItem = $(".accordion-item1").eq(index);
         let currentBody = currentItem.find(".accordion-body");
@@ -207,9 +202,7 @@ $(document).ready(function(){
     });
     $("#appointments").on("click", ".book-btn", function(){
         let index = $(this).index();
-        console.log("Button clicked!");
 
-        // Rest of your code...
     });
 
     $("#appointments").on("click", ".cancel-btn", function(){
@@ -219,7 +212,7 @@ $(document).ready(function(){
         row.removeAttr("style");
         booked_column.html("false");
         toastr.info("Appointment canceled successfully!");
-    })
+    });
 
 });
 
