@@ -1,0 +1,42 @@
+.hire-us-container {
+  margin-top: 40px;
+}
+
+.hire-us-heading {
+  font-weight: bold;
+}
+
+.hire-us-contact-info {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hire-us-form {
+  margin-top: 20px;
+}
+
+.hire-us-field {
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.hire-us-field .MuiInputBase-input {
+  color: black !important;
+}
+
+.hire-us-field .MuiInputLabel-root {
+  color: black !important;
+}
+
+.hire-us-field .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: black !important;
+}
+
+.hire-us-button {
+  background-color: black;
+  color: white;
+}
+
+.hire-us-button:hover {
+  background-color: darkgray;
+}

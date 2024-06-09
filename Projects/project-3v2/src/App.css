@@ -1,0 +1,17 @@
+.navbar-btn {
+    font-size: 1.25rem;
+}
+
+.navbar-container {
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'space-between';
+}
+
+#header-h1 {
+    font-size: 3rem;
+}
+
+#header-h2 {
+    font-size: 2.5rem;
+}
